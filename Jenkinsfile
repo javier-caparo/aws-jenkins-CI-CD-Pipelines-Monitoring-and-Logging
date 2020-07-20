@@ -9,5 +9,11 @@ ls -lah'''
       }
     }
 
+    stage('Lint HTML') {
+      steps {
+        sh 'tidy -q -e *.html'
+      }
+    }
+
   }
 }
